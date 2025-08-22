@@ -55,16 +55,16 @@ O projeto estará disponível em:
 
 🏠 Página inicial
 
-![Screenshot Home](./public/print_screen_home.png)
+![Screenshot Home](./public/screenshots/print_screen_home.png)
 
 🛒 Carrinho
 
-![Screenshot Cart](./public/print_screen_complete_order1.png)
-![Screenshot Cart](./public/print_screen_complete_order2.png)
+![Screenshot Cart](./public/screenshots/print_screen_complete_order1.png)
+![Screenshot Cart](./public/screenshots/print_screen_complete_order2.png)
 
 ✅ Checkout
 
-![Screenshot Checkout](./public/print_screen_order_complete.png)
+![Screenshot Checkout](./public/screenshots/print_screen_order_complete.png)
 
 ---
 
