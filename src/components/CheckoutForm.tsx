@@ -77,7 +77,7 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] w-[40%] focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] md:text-2xl lg:text-3xl md:mb-3 w-[40%] focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
@@ -90,7 +90,7 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] w-full bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] w-full md:text-2xl lg:text-3xl md:mb-3 bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
@@ -104,9 +104,9 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] w-[40%] focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
-                    ${value.placeholder === "Número" ? "  w-[50%] md:w-[30%]" : ""}
-                    ${value.placeholder === "Complemento" ? "w-[70%]" : ""}
+                    className={`border-[#E6E5E5] w-[40%] md:text-2xl lg:text-3xl md:mb-3 focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
+                    ${value.placeholder === "Número" ? "max-w-[110px] md:min-w-[280px]" : ""}
+                    ${value.placeholder === "Complemento" ? "max-w-[110px] md:min-w-[280px]" : ""}
                   `}
                   />
                   <p>{errors[value.name]?.message}</p>
@@ -127,9 +127,9 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
-                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[350px] lg:min-w-[400px]" : ""}
-                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[350px] lg:min-w-[400px]" : ""}
+                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-2xl lg:text-3xl md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
+                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[400px]" : ""}
+                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[400px]" : ""}
                 ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[100px]" : ""}
                 `}
                   />
@@ -140,18 +140,18 @@ const CheckoutForm = () => {
         </div>
 
         <div className="mt-5 mb-7 flex bg-[#F3F2F2] px-3  py-4 flex-col text-center mx-auto ">
-          <div className="mb-5 gap-2 flex items-center justify-center">
-            <CurrencyDollarIcon color="green" className="text-[55px] "/>
-            <p className="text-[16px] wrap-normal">
+          <div className="mb-5 md:mt-10 gap-2 flex items-center justify-center">
+            <CurrencyDollarIcon color="green" className=" md:text-[45px] lg:text-[55px] "/>
+            <p className="text-[16px] md:text-2xl lg:text-[30px] wrap-normal">
               Pagamento é feito na entrega. Escolha a forma que deseja pagar
             </p>
           </div>
-          <div className="flex flex-col w-[80%] mx-auto md:justify-evenly gap-4">
+          <div className="flex flex-col lg:flex-row w-[80%] mx-auto md:justify-center gap-4">
             {PaymentMethod.map((option) => (
               <label
                 key={option.id}
-                className={`cursor-pointer rounded-lg items-center justify-center py-2 border transition
-                  ${selected === option.name ? "bg-blue-500 text-white border-blue-500" : "bg-white border-gray-300"}  
+                className={`cursor-pointer rounded-lg md:rounded-2xl items-center justify-center py-2 border transition
+                  ${selected === option.name ? "bg-blue-500  text-white border-blue-500" : "bg-white border-gray-300"}  
                 `}
               >
                 <input
@@ -160,7 +160,7 @@ const CheckoutForm = () => {
                   value={option.name}
                   className="hidden"
                 />
-                <div className="flex gap-2 px-3 items-center justify-center">
+                <div className="flex gap-2 px-3 md:text-xl lg:text-[25px] items-center justify-center">
                   {option.icon}
                   {option.name}
                 </div>
