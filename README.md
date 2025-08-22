@@ -48,7 +48,7 @@ npm run dev
 ---
 
 O projeto estará disponível em:
-👉 http://localhost:5173
+👉https://coffee-dev-five.vercel.app/
 
 
 ---
