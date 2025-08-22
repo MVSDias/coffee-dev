@@ -24,7 +24,7 @@ const Header = () => {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
-        
+
         try {
           const response = await fetch(
             `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`,
@@ -47,7 +47,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex fixed z-10 top-0 left-0 right-0 justify-between items-center w-full py-3 px-4 min-h-16 bg-[rgb(240,_149,_89)]">
+    <div className="flex fixed z-10 top-0 left-0 right-0 justify-between items-center w-full py-3 px-4 md:px-14 min-h-16 bg-[rgb(240,_149,_89)]">
 
 
        {/** div-logo */}
