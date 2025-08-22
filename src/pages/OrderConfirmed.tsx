@@ -69,8 +69,7 @@ const OrderConfirmed = () => {
       </div>
 
       <div>
-        <img src={LogoEntrega} alt="LogoEntrega" className=" w-[80%] sm:w-[100%]  pt-18" />
-        <img src={LogoEntrega} alt="LogoEntrega" className=" w-[80%] sm:w-[100%]  pt-18" />
+        <img src={LogoEntrega} alt="LogoEntrega" className=" w-[80%] sm:w-[100%]  pt-18" />        
       </div>
     </div>
   );
