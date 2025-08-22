@@ -26,16 +26,16 @@ export function CompleteOrder() {
         {/** contem o titulo e o formaddrress */}
 
         {/** Aqui é o componente de endereço */}
-        <h3 className="text-[#8c5920] mb-2  text-2xl md:text-3xl  font-bold">Complete seu pedido</h3>
+        <h3 className="text-[#8c5920] mb-2  text-2xl xl:text-3xl  font-bold">Complete seu pedido</h3>
 
         <div>
           <div className="bg-[#F3F2F2] rounded-bl-[65px] rounded-tr-[65px] w-full px-4 py-2  text-amber-900">
             <div>
               <div className="flex items-center pt-4 mb-4 gap-1 md:gap-2 md:mb-8">
-                <MapPinLineIcon  className="text-[28px] md:text-[50px] lg:text-[60px]"/>
+                <MapPinLineIcon  className="text-[28px] md:text-[50px] xl:text-[60px]"/>
                 <div>
-                  <h3 className="md:text-2xl lg:text-3xl">Endereço de Entrega</h3>
-                  <p className="text-[12px] md:text-xl lg:text-2xl">Informe o endereço onde deseja receber seu pedido</p>
+                  <h3 className="md:text-2xl xl:text-3xl">Endereço de Entrega</h3>
+                  <p className="text-[12px] md:text-xl xl:text-2xl">Informe o endereço onde deseja receber seu pedido</p>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ export function CompleteOrder() {
       {/** aqui vai ter meu resumo de cafés escolhidos */}
 
       <div className=" bg-[#D7D5D5] mt-10 md:mt-14">
-        <h3 className="text-2xl md:text-3xl mb-2 text-[#8c5920] font-bold">Cafés selecionados</h3>
+        <h3 className="text-2xl xl:text-3xl mb-2 text-[#8c5920] font-bold">Cafés selecionados</h3>
         <div className="bg-[#F3F2F2] py-8 px-4 rounded-bl-[65px] rounded-tr-[65px]  text-amber-900">
           <div className=" mb-18">
             <SelectedCoffees />
@@ -65,30 +65,30 @@ export function CompleteOrder() {
             <div className="h-1 w-full bg-[#8c5920] mb-10"></div>
             <div className="flex justify-between px-2 mb-2">
               <div className="flex gap-2">
-                <p className="md:text-xl md:font-semibold lg:text-2xl">Total de itens</p>
-                <span className="md:text-xl lg:text-2xl md:font-semibold">{cartItemsQuantity}</span>
+                <p className="md:text-xl md:font-semibold xl:text-2xl">Total de itens</p>
+                <span className="md:text-xl xl:text-2xl md:font-semibold">{cartItemsQuantity}</span>
               </div>
 
-              <span className="md:text-xl lg:text-2xl md:font-semibold">{formattedCartItemsPrice}</span>
+              <span className="md:text-xl xl:text-2xl md:font-semibold">{formattedCartItemsPrice}</span>
             </div>
 
             <div className="flex items-center justify-between px-2 mb-2">
-              <p  className="md:text-xl lg:text-2xl md:font-semibold">Entrega</p>
-              <span className="md:text-xl lg:text-2xl md:font-semibold">{formattedDeliveryPrice}</span>
+              <p  className="md:text-xl xl:text-2xl md:font-semibold">Entrega</p>
+              <span className="md:text-xl xl:text-2xl md:font-semibold">{formattedDeliveryPrice}</span>
             </div>
 
             <div className="flex items-center justify-between px-2 mb-6">
               <p>
-                <strong className="text-xl lg:text-2xl">Total</strong>
+                <strong className="text-xl xl:text-2xl">Total</strong>
               </p>
               <span>
-                <strong className="text-xl md:text-2xl">{formattedCartTotalPrice}</strong>
+                <strong className="text-xl xl:text-2xl font-bold">{formattedCartTotalPrice}</strong>
               </span>
             </div>
 
             <div className="px-1">
               <button
-              className="md:text-2xl lg:text-3xl bg-amber-200 w-full rounded-lg cursor-pointer py-2 font-bold mb-4"
+              className="md:text-2xl xl:text-3xl bg-amber-200 w-full rounded-lg cursor-pointer py-2 font-bold mb-4"
               type="submit"
               form="address-form"              
             >

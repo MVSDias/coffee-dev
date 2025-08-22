@@ -68,7 +68,7 @@ const CheckoutForm = () => {
   return (
     <div className="bg-[#D7D5D5]">
       <form id="address-form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 gap-x-3">
+        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 gap-x-3 xl-mb-7">
           {inputFields
             .filter((item) => item.placeholder === "CEP")
             .map((value) => (
@@ -77,7 +77,7 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] md:text-2xl lg:text-3xl md:mb-3 w-[40%] focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] md:text-xl xl:text-3xl md:mb-3  w-full focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
@@ -90,7 +90,7 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] w-full md:text-2xl lg:text-3xl md:mb-3 bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] w-full md:text-xl xl:text-3xl md:mb-3 bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
@@ -104,9 +104,9 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] w-[40%] md:text-2xl lg:text-3xl md:mb-3 focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
-                    ${value.placeholder === "Número" ? "max-w-[110px] md:min-w-[280px]" : ""}
-                    ${value.placeholder === "Complemento" ? "max-w-[110px] md:min-w-[280px]" : ""}
+                    className={`border-[#E6E5E5] w-[40%] md:text-xl xl:text-3xl xl:mr-4 md:mb-3  focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
+                    ${value.placeholder === "Número" ? "max-w-[110px] xl:min-w-[780px]" : ""}
+                    ${value.placeholder === "Complemento" ? "max-w-[110px] xl:min-w-[780px]" : ""}
                   `}
                   />
                   <p>{errors[value.name]?.message}</p>
@@ -127,10 +127,10 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-2xl lg:text-3xl md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
-                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[400px]" : ""}
-                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[400px]" : ""}
-                ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[100px]" : ""}
+                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-xl xl:text-3xl xl:mr-4 md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
+                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[450px] xl:min-w-[600px]" : ""}
+                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[450px] xl:min-w-[600px]" : ""}
+                ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[100px] lg:min-w-[120px]" : ""}
                 `}
                   />
                   <p>{errors[value.name]?.message}</p>
@@ -141,8 +141,8 @@ const CheckoutForm = () => {
 
         <div className="mt-5 mb-7 flex bg-[#F3F2F2] px-3  py-4 flex-col text-center mx-auto ">
           <div className="mb-5 md:mt-10 gap-2 flex items-center justify-center">
-            <CurrencyDollarIcon color="green" className=" md:text-[45px] lg:text-[55px] "/>
-            <p className="text-[16px] md:text-2xl lg:text-[30px] wrap-normal">
+            <CurrencyDollarIcon color="green" className=" md:text-[35px] xl:text-[55px] "/>
+            <p className="text-[16px] md:text-xl xl:text-[30px] wrap-normal">
               Pagamento é feito na entrega. Escolha a forma que deseja pagar
             </p>
           </div>
@@ -160,7 +160,7 @@ const CheckoutForm = () => {
                   value={option.name}
                   className="hidden"
                 />
-                <div className="flex gap-2 px-3 md:text-xl lg:text-[25px] items-center justify-center">
+                <div className="flex gap-2 px-3 md:text-[18px] lg:text-[16px] xl:text-[24px] items-center justify-center">
                   {option.icon}
                   {option.name}
                 </div>
