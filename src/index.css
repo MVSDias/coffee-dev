@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Reset global e box-sizing */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* Altura 100% para html, body e root */
+html, body, #root {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #D7D5D5
+}
+
