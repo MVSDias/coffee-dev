@@ -68,7 +68,7 @@ const CheckoutForm = () => {
   return (
     <div className="bg-[#D7D5D5]">
       <form id="address-form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 sm:px-3 gap-x-3 xl-mb-7 lg:px-3">
+        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 px-3 sm:px-3 gap-x-3 xl-mb-7 lg:px-3">
           {inputFields
             .filter((item) => item.placeholder === "CEP")
             .map((value) => (
@@ -129,7 +129,7 @@ const CheckoutForm = () => {
                     placeholder={value.placeholder}
                     className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-xl md:px-5 lg:text-[16px]  md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
                 ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[280px] lg:min-w-[170px] xl:min-w-[250px]" : ""}
-                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[280px] lg:min-w-[170px] xl:min-w-[250px]" : ""}
+                ${value.placeholder === "Cidade" ? "max-w-[100px] md:min-w-[280px] lg:min-w-[170px] xl:min-w-[250px]" : ""}
                 ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[80px] lg:min-w-[70px]" : ""}
                 `}
                   />

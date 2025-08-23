@@ -31,7 +31,7 @@ export function CompleteOrder() {
         <div>
           <div className="bg-[#F3F2F2] rounded-bl-[65px] rounded-tr-[65px]  lg:flex lg:justify-center  py-2  text-amber-900">
             <div>
-              <div className="flex items-center pt-4 sm:px-5 sm:gap-2  lg:px-4 mb-4 gap-1 md:gap-2 md:mb-8 md:px-6">
+              <div className="flex items-center pt-4 sm:px-5 sm:gap-2 px-3 lg:px-4 mb-4 gap-1 md:gap-2 md:mb-8 md:px-6">
                 <MapPinLineIcon  className="text-[28px] md:text-[50px] lg:text-[40px] "/>
                 <div>
                   <h3 className="md:text-[20px] ">Endereço de Entrega</h3>
