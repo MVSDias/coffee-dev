@@ -68,6 +68,10 @@ O projeto estará disponível em:
 
 ![Screenshot Checkout](./screenshots/print_screen_order_complete.png)
 
+📱 Mobile
+
+![Screenshot Mobile](./screenshots/homepage_coffee_devs.png)
+
 ---
 
 📂 Estrutura
