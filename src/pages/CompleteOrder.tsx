@@ -21,21 +21,21 @@ export function CompleteOrder() {
   
 
   return (
-    <div className=" px-6 mt-24 md:mt-28 mb-8 flex-1">
-      <div className="">
+    <div className=" flex flex-col lg:flex-row  px-6 md:justify-between lg:justify-center mt-24 md:mt-28 mb-8 ">
+      <div className=" px-4 lg:px-4">
         {/** contem o titulo e o formaddrress */}
 
         {/** Aqui é o componente de endereço */}
-        <h3 className="text-[#8c5920] mb-2  text-2xl xl:text-3xl  font-bold">Complete seu pedido</h3>
+        <h3 className="text-[#8c5920] mb-2 text-2xl font-bold">Complete seu pedido</h3>
 
         <div>
-          <div className="bg-[#F3F2F2] rounded-bl-[65px] rounded-tr-[65px] w-full px-4 py-2  text-amber-900">
+          <div className="bg-[#F3F2F2] rounded-bl-[65px] rounded-tr-[65px]  lg:flex lg:justify-center  py-2  text-amber-900">
             <div>
-              <div className="flex items-center pt-4 mb-4 gap-1 md:gap-2 md:mb-8">
-                <MapPinLineIcon  className="text-[28px] md:text-[50px] xl:text-[60px]"/>
+              <div className="flex items-center pt-4 sm:px-5 sm:gap-2  lg:px-4 mb-4 gap-1 md:gap-2 md:mb-8 md:px-6">
+                <MapPinLineIcon  className="text-[28px] md:text-[50px] lg:text-[40px] "/>
                 <div>
-                  <h3 className="md:text-2xl xl:text-3xl">Endereço de Entrega</h3>
-                  <p className="text-[12px] md:text-xl xl:text-2xl">Informe o endereço onde deseja receber seu pedido</p>
+                  <h3 className="md:text-[20px] ">Endereço de Entrega</h3>
+                  <p className="text-[12px] md:text-[16px]">Informe o endereço onde deseja receber seu pedido</p>
                 </div>
               </div>
 
@@ -52,8 +52,8 @@ export function CompleteOrder() {
 
       {/** aqui vai ter meu resumo de cafés escolhidos */}
 
-      <div className=" bg-[#D7D5D5] mt-10 md:mt-14">
-        <h3 className="text-2xl xl:text-3xl mb-2 text-[#8c5920] font-bold">Cafés selecionados</h3>
+      <div className=" bg-[#D7D5D5] mt-10 md:mt-14 lg:mt-1 md:mr-4">
+        <h3 className="text-2xl  mb-2 text-[#8c5920] font-bold">Cafés selecionados</h3>
         <div className="bg-[#F3F2F2] py-8 px-4 rounded-bl-[65px] rounded-tr-[65px]  text-amber-900">
           <div className=" mb-18">
             <SelectedCoffees />
