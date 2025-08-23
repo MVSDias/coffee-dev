@@ -68,7 +68,7 @@ const CheckoutForm = () => {
   return (
     <div className="bg-[#D7D5D5]">
       <form id="address-form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 gap-x-3 xl-mb-7">
+        <div className="flex border-[#E6E5E5] bg-[#F3F2F2] flex-col gap-y-4 sm:px-3 gap-x-3 xl-mb-7 lg:px-3">
           {inputFields
             .filter((item) => item.placeholder === "CEP")
             .map((value) => (
@@ -77,7 +77,7 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] md:text-xl xl:text-3xl md:mb-3  w-full focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] md:text-xl md:px-5 lg:text-[16px] md:mb-3  w-[50%] focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
@@ -90,12 +90,12 @@ const CheckoutForm = () => {
                   type={value.type}
                   {...register(value.name)}
                   placeholder={value.placeholder}
-                  className={`border-[#E6E5E5] w-full md:text-xl xl:text-3xl md:mb-3 bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
+                  className={`border-[#E6E5E5] w-full md:w-[90%] md:text-xl md:px-5 lg:text-[16px] md:mb-3 bg-[#EDEDED] focus:outline-none focus:ring-2  focus:ring-[#8c5920] rounded-lg px-3 py-1`}
                 />
                 <p>{errors[value.name]?.message}</p>
               </div>
             ))}
-          <div className="flex flex-col md:flex-row max-w-[90%] gap-2">
+          <div className="flex flex-col md:flex-row max-w-[80%] gap-2">
             {inputFields
               .filter((item) => item.placeholder === "Número" || item.placeholder === "Complemento")
               .map((value) => (
@@ -104,9 +104,9 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] w-[40%] md:text-xl xl:text-3xl xl:mr-4 md:mb-3  focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
-                    ${value.placeholder === "Número" ? "max-w-[110px] xl:min-w-[780px]" : ""}
-                    ${value.placeholder === "Complemento" ? "max-w-[110px] xl:min-w-[780px]" : ""}
+                    className={`border-[#E6E5E5] w-[40%] md:text-xl md:px-5 lg:text-[16px] md:mb-3  focus:outline-none focus:ring-2 focus:ring-[#8c5920] bg-[#EDEDED] rounded-lg px-3 py-1
+                    ${value.placeholder === "Número" ? "max-w-[110px] md:min-w-[200px] lg:min-w-[120px] xl:min-w-[180px]" : ""}
+                    ${value.placeholder === "Complemento" ? "max-w-[110px] md:min-w-[350px] lg:min-w-[170px] xl:min-w-[350px]" : ""}
                   `}
                   />
                   <p>{errors[value.name]?.message}</p>
@@ -127,10 +127,10 @@ const CheckoutForm = () => {
                     type={value.type}
                     {...register(value.name)}
                     placeholder={value.placeholder}
-                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-xl xl:text-3xl xl:mr-4 md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
-                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[450px] xl:min-w-[600px]" : ""}
-                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[250px] lg:min-w-[450px] xl:min-w-[600px]" : ""}
-                ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[100px] lg:min-w-[120px]" : ""}
+                    className={`border-[#E6E5E5] bg-[#EDEDED] rounded-lg md:text-xl md:px-5 lg:text-[16px]  md:mb-3 px-3 py-1 mb-10 focus:outline-none focus:ring-2 focus:ring-[#8c5920]
+                ${value.placeholder === "Bairro" ? "max-w-[110px] md:min-w-[280px] lg:min-w-[170px] xl:min-w-[250px]" : ""}
+                ${value.placeholder === "Cidade" ? "max-w-[110px] md:min-w-[280px] lg:min-w-[170px] xl:min-w-[250px]" : ""}
+                ${value.placeholder === "UF" ? "max-w-[50px] md:min-w-[80px] lg:min-w-[70px]" : ""}
                 `}
                   />
                   <p>{errors[value.name]?.message}</p>
@@ -139,18 +139,20 @@ const CheckoutForm = () => {
           </div>
         </div>
 
-        <div className="mt-5 mb-7 flex bg-[#F3F2F2] px-3  py-4 flex-col text-center mx-auto ">
-          <div className="mb-5 md:mt-10 gap-2 flex items-center justify-center">
-            <CurrencyDollarIcon color="green" className=" md:text-[35px] xl:text-[55px] "/>
-            <p className="text-[16px] md:text-xl xl:text-[30px] wrap-normal">
-              Pagamento é feito na entrega. Escolha a forma que deseja pagar
-            </p>
+        <div className="mt-5 mb-7 sm:mb-10 flex bg-[#F3F2F2] px-3 lg:mb-12 py-4 flex-col text-center mx-auto ">
+          <div className="mb-5 md:mt-10 lg:mt-5  gap-2 flex items-center justify-center md:px-auto">
+            <CurrencyDollarIcon color="green" className=" md:text-[35px] lg:text-[30px] lg:px-4xl:text-[55px] "/>
+            <span className="text-[16px] md:text-xl lg:text-[16px] lg:max-w-[70%] wrap-normal">
+              Pagamento é feito na entrega.
+              <br />
+              Escolha a forma que deseja pagar
+            </span>
           </div>
-          <div className="flex flex-col lg:flex-row w-[80%] mx-auto md:justify-center gap-4">
+          <div className="flex flex-col lg:flex-row lg:max-w-full mx-auto lg:mx-1 md:justify-center gap-2 md:gap-2">
             {PaymentMethod.map((option) => (
               <label
                 key={option.id}
-                className={`cursor-pointer rounded-lg md:rounded-2xl items-center justify-center py-2 border transition
+                className={`cursor-pointer rounded-lg md:rounded-2xl items-center justify-center lg:mb-7 py-2 md:py-1 border transition
                   ${selected === option.name ? "bg-blue-500  text-white border-blue-500" : "bg-white border-gray-300"}  
                 `}
               >
@@ -160,7 +162,7 @@ const CheckoutForm = () => {
                   value={option.name}
                   className="hidden"
                 />
-                <div className="flex gap-2 px-3 md:text-[18px] lg:text-[16px] xl:text-[24px] items-center justify-center">
+                <div className="flex gap-2 px-3 lg:px-2 md:text-[18px] lg:text-[12px] items-center justify-center">
                   {option.icon}
                   {option.name}
                 </div>
