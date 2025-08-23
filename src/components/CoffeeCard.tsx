@@ -62,14 +62,14 @@ export function CoffeeCard({ coffee }: CoffeCardProps) {
         <img
           src={`/images/${coffee.photo}`}
           alt={coffee.name}
-          className="mt-[-25px] w-[95px] sm:w-[100px] md:w-[120px]"
+          className="mt-[-25px] w-[95px] sm:w-[100px] md:w-[120px] "
         />
       </div>
       <div className="max-w-[70%] flex flex-col items-center justify-center text-center">
         <p className="bg-orange-200 px-2 mt-[-20px] text-[13px] md:text-[11px] text-[#b3660f] text-nowrap sm:text-[11px] rounded-lg">
           {coffee.tags}
         </p>
-        <h3 className=" text-[25px] sm:text-[20px] md:text-[15px] lg:text-[18px] mt-2 font-bold text-[#8b4e08]  text-nowrap">
+        <h3 className=" text-[22px] sm:text-[20px] md:text-[15px] lg:text-[18px] mt-2 font-bold text-[#8b4e08] wrap-normal">
           {coffee.name}
         </h3>
         <p className="text-[#be6c0e] text-[12px] mb-2 sm:text-[11px] md:text-[10px] lg:text-[11px] rounded-lg">
@@ -118,7 +118,7 @@ export function CoffeeCard({ coffee }: CoffeCardProps) {
           <ShoppingCartIcon
             size={24}
             weight="fill"
-            className="bg-blue-300 p-0.5 rounded-sm cursor-pointer ml-3 md:ml-0"
+            className="bg-orange-400 p-0.5 rounded-sm cursor-pointer ml-3 md:ml-0 active:bg-orange-900"
           />
         </button>
       </div>
